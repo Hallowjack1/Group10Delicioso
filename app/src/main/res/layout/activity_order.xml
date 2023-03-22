@@ -18,7 +18,7 @@
         android:textColor="#000000"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvOrderPrice" />
+        app:layout_constraintTop_toTopOf="@+id/editOrderPrice" />
 
     <ImageView
         android:id="@+id/imgOrder"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvOrderName"
+        android:id="@+id/editOrderName"
         android:layout_width="313dp"
         android:layout_height="44dp"
         android:layout_marginTop="52dp"
@@ -45,12 +45,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvOrderPrice"
+        android:id="@+id/editOrderPrice"
         android:layout_width="171dp"
         android:layout_height="37dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-black"
-        android:text=" Order Price"
+        android:text="Price"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="25sp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imgOrder" />
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/editName"
         android:layout_width="290dp"
         android:layout_height="55dp"
         android:layout_marginTop="28dp"
@@ -70,10 +70,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOrderPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/editOrderPrice" />
 
     <EditText
-        android:id="@+id/etQuantity"
+        android:id="@+id/editQuantity"
         android:layout_width="290dp"
         android:layout_height="55dp"
         android:layout_marginTop="24dp"
@@ -84,10 +84,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
 
     <Button
-        android:id="@+id/btnFinish"
+        android:id="@+id/btnEdit"
         android:layout_width="131dp"
         android:layout_height="56dp"
         android:text="Finish"

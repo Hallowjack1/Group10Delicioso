@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
-import android.media.Image;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -24,14 +24,13 @@ public class Order extends AppCompatActivity {
     EditText etName, etQuantity;
     Button btnFinish;
     private static JSONParser jParser = new JSONParser();
-    private static String urlHost = "http://192.168.254.101/Delicioso/Order.php";
+    private static String urlHost = "http://192.168.110.91/Delicioso/Order.php";
     private static String TAG_MESSAGE = "message", TAG_SUCCESS = "success";
     private static String online_dataset = "";
     private static String customerName = "";
     private static String quantity = "";
     private static String orderName = "";
     private static String orderPrice = "";
-    private static String orderDofP = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +38,11 @@ public class Order extends AppCompatActivity {
         setContentView(R.layout.activity_order);
 
         OrderPicture = findViewById(R.id.imgOrder);
-        OrderName = findViewById(R.id.tvOrderName);
-        OrderPrice = findViewById(R.id.tvOrderPrice);
-        etName = findViewById(R.id.etName);
-        etQuantity = findViewById(R.id.etQuantity);
-        btnFinish = findViewById(R.id.btnFinish);
+        OrderName = findViewById(R.id.editOrderName);
+        OrderPrice = findViewById(R.id.editOrderPrice);
+        etName = findViewById(R.id.editName);
+        etQuantity = findViewById(R.id.editQuantity);
+        btnFinish = findViewById(R.id.btnEdit);
 
         Bundle bundle = getIntent().getExtras();
         String name, price;
@@ -67,6 +66,10 @@ public class Order extends AppCompatActivity {
                 customerName = etName.getText().toString();
                 quantity = etQuantity.getText().toString();
                 new uploadDataToURL().execute();
+
+                Intent i = new Intent(Order.this, MainActivity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

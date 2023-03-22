@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Matthew/Documents/College/3rd Year College/2nd Semester/ITP211/Group10Delicioso/app/src/main/res/layout/activity_edit_order.xml" value="0.21014492753623187" />
         <entry key="..\:/Users/Matthew/Documents/College/3rd Year College/2nd Semester/ITP211/Group10Delicioso/app/src/main/res/layout/activity_home.xml" value="0.21014492753623187" />
+        <entry key="..\:/Users/Matthew/Documents/College/3rd Year College/2nd Semester/ITP211/Group10Delicioso/app/src/main/res/layout/activity_j_s_o_n_parser.xml" value="0.21014492753623187" />
         <entry key="..\:/Users/Matthew/Documents/College/3rd Year College/2nd Semester/ITP211/Group10Delicioso/app/src/main/res/layout/activity_main.xml" value="0.4" />
-        <entry key="..\:/Users/Matthew/Documents/College/3rd Year College/2nd Semester/ITP211/Group10Delicioso/app/src/main/res/layout/activity_manage.xml" value="0.21014492753623187" />
+        <entry key="..\:/Users/Matthew/Documents/College/3rd Year College/2nd Semester/ITP211/Group10Delicioso/app/src/main/res/layout/activity_manage.xml" value="0.264" />
         <entry key="..\:/Users/Matthew/Documents/College/3rd Year College/2nd Semester/ITP211/Group10Delicioso/app/src/main/res/layout/activity_order.xml" value="0.4" />
+        <entry key="..\:/Users/Matthew/Documents/College/3rd Year College/2nd Semester/ITP211/Group10Delicioso/app/src/main/res/layout/custom_list_item.xml" value="0.21014492753623187" />
       </map>
     </option>
   </component>

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Group10Delicioso"
         tools:targetApi="31">
         <activity
+            android:name=".EditOrder"
+            android:exported="false" />
+        <activity
             android:name=".Manage"
             android:exported="false" />
         <activity
