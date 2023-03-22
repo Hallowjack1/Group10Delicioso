@@ -1,7 +1,7 @@
 <?php
     require("config.php");
     $code = $_REQUEST['code'];
-    $sql = "SELECT Publisher FROM custtbl WHERE Booktitle LIKE '%$code%'";
+    $sql = "SELECT OrderName FROM customerorder WHERE CustomerName LIKE '%$code%'";
 
 //count how many people
 //$sql = "SELECT COUNT(*) FROM tbl_people WHERE Fullname LIKE '%$code\"";

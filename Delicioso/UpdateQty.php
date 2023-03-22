@@ -1,7 +1,7 @@
 <?php
     require("config.php");
-    $sql = "UPDATE custtbl SET Booktitle = ".$_REQUEST["booktitle"]. ", Author = ".$_REQUEST["author"]. ", Publisher = ". $_REQUEST["publisher"]. " ,
-    Dateofpublication = ". $_REQUEST["publication"] . " WHERE ID = '" . $_REQUEST["id"] . "'";
+    $sql = "UPDATE customerorder SET CustomerName = ".$_REQUEST["CustomerName"]. ", Quantity = ".$_REQUEST["Quantity"]. ", OrderName = ". $_REQUEST["OrderName"]. " ,
+    OrderPrice = ". $_REQUEST["OrderPrice"] . " WHERE ID = '" . $_REQUEST["id"] . "'";
 
     try{
         $dbrecords = mysqli_query($connect, $sql);

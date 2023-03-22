@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `customerorder` (
   `ID` int(100) NOT NULL,
-  `Name` varchar(200) NOT NULL,
+  `CustomerName` varchar(200) NOT NULL,
   `Quantity` int(100) NOT NULL,
   `OrderName` varchar(200) NOT NULL,
   `OrderPrice` varchar(100) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `customerorder` (
 -- Dumping data for table `customerorder`
 --
 
-INSERT INTO `customerorder` (`ID`, `Name`, `Quantity`, `OrderName`, `OrderPrice`, `DateOfPurchase`) VALUES
+INSERT INTO `customerorder` (`ID`, `CustomerName`, `Quantity`, `OrderName`, `OrderPrice`, `DateOfPurchase`) VALUES
 (1, 'Matthew', 2, 'Plant Base Whopper', '60', '2023-03-21');
 
 --
