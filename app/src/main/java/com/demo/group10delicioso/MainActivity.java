@@ -13,7 +13,7 @@ Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
 
         Order = findViewById(R.id.btnOrder);
         Manage = findViewById(R.id.btnManage);

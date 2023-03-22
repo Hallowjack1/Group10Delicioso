@@ -172,14 +172,9 @@ public class Manage extends AppCompatActivity {
                     }
                 });
                 alert_confirm.show();
-
             }
         });
-
-
-
     }
-
 
     private class uploadDataToURL extends AsyncTask<String, String, String> {
         String cPOST = "", cPostSQL = "", cMessage = "Querying data...";
@@ -320,9 +315,9 @@ public class Manage extends AppCompatActivity {
 
                 String str = custneym;
                 final String CustName[] = str.split("-");
-                list_Quantity = new ArrayList<String>(Arrays.asList(CustName));
-                adapter_Quantity = new ArrayAdapter<String>(Manage.this,
-                        android.R.layout.simple_list_item_1,list_Quantity);
+                list_CustomerName = new ArrayList<String>(Arrays.asList(CustName));
+                adapter_CustomerName = new ArrayAdapter<String>(Manage.this,
+                        android.R.layout.simple_list_item_1,list_CustomerName);
 
                 //listView.setAdapter(adapter_gender);
 
@@ -559,8 +554,6 @@ public class Manage extends AppCompatActivity {
 
                 //listView.setAdapter(adapter_gender);
 
-
-
             } else {
                 alert.setMessage("Query Interrupted... \nPlease Check Internet connection");
                 alert.setTitle("Error");
@@ -568,7 +561,6 @@ public class Manage extends AppCompatActivity {
             }
         }
     }
-
 
     private class ID extends AsyncTask<String, String, String> {
         String cPOST = "", cPostSQL = "", cMessage = "Querying data...";

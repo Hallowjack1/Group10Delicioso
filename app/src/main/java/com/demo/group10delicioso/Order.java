@@ -1,6 +1,7 @@
 package com.demo.group10delicioso;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -66,6 +67,9 @@ public class Order extends AppCompatActivity {
                 customerName = etName.getText().toString();
                 quantity = etQuantity.getText().toString();
                 new uploadDataToURL().execute();
+
+                //DialogFragment dialogFragment=new DialogFragment();
+                //dialogFragment.show(getSupportFragmentManager(),"Total");
 
                 Intent i = new Intent(Order.this, MainActivity.class);
                 startActivity(i);

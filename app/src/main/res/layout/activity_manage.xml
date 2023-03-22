@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5ebdc"
+    android:background="#F4D19B"
     tools:context=".Manage">
 
     <TextView
@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="20dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txt_OrderPrice"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toStartOf="@+id/txt_CustomerName"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,9 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="20dp"
         android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/txt_CustomerName"
+        app:layout_constraintEnd_toStartOf="@+id/txt_ID"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toStartOf="@+id/txt_Quantity"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,8 +51,8 @@
         android:id="@+id/txt_OrderPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="26dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,7 +61,7 @@
         android:id="@+id/edtitemcode"
         android:layout_width="248dp"
         android:layout_height="48dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="88dp"
         android:ems="18"
         android:inputType="textPersonName"
@@ -79,7 +79,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.277" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView4"
@@ -94,10 +94,11 @@
         android:id="@+id/btnSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="88dp"
         android:text="Search"
+        app:backgroundTint="#CCD62300"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toEndOf="@+id/edtitemcode"
-        app:layout_constraintTop_toBottomOf="@+id/txt_OrderPrice" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

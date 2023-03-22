@@ -6,15 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
-ImageView imgWhopper, imgWhopperCheese, imgBakon, imgBakonDouble, imgRoyale, imgRoyaleCheese;
+ImageView imgWhopper, imgWhopperCheese, imgBakon, imgBakonDouble, imgRoyale, imgRoyaleCheese,
+        imgWhopperBakon, imgRoyaleBakon;
 Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         imgWhopper = findViewById(R.id.imgWhopper);
         imgWhopperCheese = findViewById(R.id.imgWhopperCHeese);
@@ -22,6 +22,8 @@ Intent i;
         imgBakonDouble = findViewById(R.id.imgBakonDouble);
         imgRoyale = findViewById(R.id.imgRoyale);
         imgRoyaleCheese = findViewById(R.id.imgRoyaleCheese);
+        imgWhopperBakon = findViewById(R.id.imgWhopperBakon);
+        imgRoyaleBakon = findViewById(R.id.imgRoyaleBakon);
 
         imgWhopper.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,17 @@ Intent i;
                 i.putExtra("resId", R.drawable.plantbasedwhooperwidcheese);
                 i.putExtra("OrderName", "Plant Base Whopper w/ Cheese");
                 i.putExtra("OrderPrice", "70");
+                startActivity(i);
+            }
+        });
+
+        imgWhopperBakon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i = new Intent(Home.this, Order.class);
+                i.putExtra("resId", R.drawable.woppercheesebakon);
+                i.putExtra("OrderName", "Plant Base Whopper Bakon");
+                i.putExtra("OrderPrice", "80");
                 startActivity(i);
             }
         });
@@ -85,6 +98,17 @@ Intent i;
                 i.putExtra("resId", R.drawable.veganroyalewidcheese);
                 i.putExtra("OrderName", "Vegan Royale w/ Cheese");
                 i.putExtra("OrderPrice", "80");
+                startActivity(i);
+            }
+        });
+
+        imgRoyaleBakon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i = new Intent(Home.this, Order.class);
+                i.putExtra("resId", R.drawable.royalebakonking);
+                i.putExtra("OrderName", "Vegan Royale Bakon King");
+                i.putExtra("OrderPrice", "90");
                 startActivity(i);
             }
         });

@@ -4,296 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5ebdc"
-    tools:context=".Home">
+    android:background="#F4D19B"
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imgRoyaleCheese"
-        android:layout_width="207dp"
-        android:layout_height="140dp"
-        android:background="#CCD62300"
-        android:clickable="true"
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:text="Order"
+        android:textSize="20dp"
+        android:textColor="#502314"
+        app:backgroundTint="#CCD62300"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBakonDouble"
-        app:srcCompat="@drawable/veganroyalewidcheese"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/imgWhopper"
-        android:layout_width="205dp"
-        android:layout_height="140dp"
-        android:background="#CCFF8732"
-        android:clickable="true"
-        app:layout_constraintEnd_toStartOf="@+id/imgWhopperCHeese"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvWhopper"
-        app:srcCompat="@drawable/plantbasewhooper"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgBakon"
-        android:layout_width="205dp"
-        android:layout_height="140dp"
-        android:background="#CCD62300"
-        android:clickable="true"
-        app:layout_constraintEnd_toStartOf="@+id/imgBakonDouble"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgWhopper"
-        app:srcCompat="@drawable/bakonking"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/imgRoyale"
-        android:layout_width="205dp"
-        android:layout_height="140dp"
-        android:background="#CCFF8732"
-        android:clickable="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBakon"
-        app:srcCompat="@drawable/veganroyale"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/imgWhopperCHeese"
-        android:layout_width="207dp"
-        android:layout_height="140dp"
-        android:background="#CCD62300"
-        android:clickable="true"
+    <Button
+        android:id="@+id/btnManage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="View Orders"
+        android:textSize="20dp"
+        android:textColor="#502314"
+        app:backgroundTint="#CCD62300"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvWhopperCheese"
-        app:srcCompat="@drawable/plantbasedwhooperwidcheese"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/imgBakonDouble"
-        android:layout_width="207dp"
-        android:layout_height="140dp"
-        android:background="#CCFF8732"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgWhopperCHeese"
-        app:srcCompat="@drawable/bakonkingdouble"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/tvWhopper"
-        android:layout_width="205dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="96dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Plant Base Whopper"
-        android:textAlignment="center"
-        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/P"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="116dp"
-        android:fontFamily="sans-serif-black"
-        android:text="P"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/p"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="116dp"
-        android:fontFamily="sans-serif-black"
-        android:text="P"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/p3"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="256dp"
-        android:fontFamily="sans-serif-black"
-        android:text="P"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/p5"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="396dp"
-        android:fontFamily="sans-serif-black"
-        android:text="P"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvWhopperPrice"
-        android:layout_width="205dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="116dp"
-        android:fontFamily="sans-serif-black"
-        android:text="60"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvRoyaleCheese"
-        android:layout_width="207dp"
-        android:layout_height="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Vegan Royale w/ Cheese"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toEndOf="@+id/tvRoyale"
-        app:layout_constraintTop_toBottomOf="@+id/imgBakonDouble" />
-
-    <TextView
-        android:id="@+id/tvRoyaleCheesePrice"
-        android:layout_width="207dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="80"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toEndOf="@+id/tvRoyale"
-        app:layout_constraintTop_toBottomOf="@+id/imgBakonDouble" />
-
-    <TextView
-        android:id="@+id/tvWhopperCheese"
-        android:layout_width="207dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="96dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Plant Base Whopper w/ Cheese"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvWhopperCheesePrice"
-        android:layout_width="207dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="116dp"
-        android:fontFamily="sans-serif-black"
-        android:text="70"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvBakon"
-        android:layout_width="205dp"
-        android:layout_height="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Plant Base Bakon King"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgWhopper" />
-
-    <TextView
-        android:id="@+id/tvBakonPrice"
-        android:layout_width="205dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="90"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgWhopper" />
-
-    <TextView
-        android:id="@+id/tvRoyale"
-        android:layout_width="205dp"
-        android:layout_height="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Vegan Royale"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBakon" />
-
-    <TextView
-        android:id="@+id/tvRoyalePrice"
-        android:layout_width="205dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="70"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBakon" />
-
-    <TextView
-        android:id="@+id/tvBakonDouble"
-        android:layout_width="207dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="140dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Plant Base Bakon King Double"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgWhopperCHeese" />
-
-    <TextView
-        android:id="@+id/p2"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="256dp"
-        android:fontFamily="sans-serif-black"
-        android:text="P"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/p4"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="396dp"
-        android:fontFamily="sans-serif-black"
-        android:text="P"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvBakonDoublePrice"
-        android:layout_width="207dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="160dp"
-        android:fontFamily="sans-serif-black"
-        android:text="100"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgWhopperCHeese" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btnOrder" />
 </androidx.constraintlayout.widget.ConstraintLayout>
