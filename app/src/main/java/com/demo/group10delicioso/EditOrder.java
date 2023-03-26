@@ -26,7 +26,7 @@ public class EditOrder extends AppCompatActivity {
     private  static TextView orderneym,orderpryce;
     private static String cItemcode = "";
     private static JSONParser jParser = new JSONParser();
-    private static String urlHost = "http://192.168.110.91/Delicioso/UpdateQty.php";
+    private static String urlHost = "http://192.168.254.107/Delicioso/UpdateQty.php";
     private static String TAG_MESSAGE = "message" , TAG_SUCCESS = "success";
     private static String online_dataset = "";
     public static String String_isempty = "";

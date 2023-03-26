@@ -24,14 +24,16 @@ public class Order extends AppCompatActivity {
     TextView OrderName, OrderPrice;
     EditText etName, etQuantity;
     Button btnFinish;
+    Intent i;
     private static JSONParser jParser = new JSONParser();
-    private static String urlHost = "http://192.168.110.91/Delicioso/Order.php";
+    private static String urlHost = "http://192.168.254.107/Delicioso/Order.php";
     private static String TAG_MESSAGE = "message", TAG_SUCCESS = "success";
     private static String online_dataset = "";
     private static String customerName = "";
     private static String quantity = "";
     private static String orderName = "";
     private static String orderPrice = "";
+    private static String finalTotal = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,19 +63,39 @@ public class Order extends AppCompatActivity {
         btnFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i = new Intent(getApplicationContext(), MainActivity.class);
+
+                Bundle args = new Bundle();
+                int rawPrice = Integer.parseInt(orderPrice);
+                int rawQuant = Integer.parseInt(quantity);
+                int total = rawPrice * rawQuant;
 
                 orderName = OrderName.getText().toString();
                 orderPrice = OrderPrice.getText().toString();
                 customerName = etName.getText().toString();
                 quantity = etQuantity.getText().toString();
+
+
+
+                finalTotal = Integer.toString(total);
                 new uploadDataToURL().execute();
+
 
                 //DialogFragment dialogFragment=new DialogFragment();
                 //dialogFragment.show(getSupportFragmentManager(),"Total");
 
-                Intent i = new Intent(Order.this, MainActivity.class);
+                args.putString("finaltotal", "Your Total is: " + finalTotal);
+
+                i.putExtras(args);
                 startActivity(i);
-                finish();
+
+                DialogFragmentCustom dialogFragmentImp = new DialogFragmentCustom();
+                dialogFragmentImp.setArguments(args);
+                dialogFragmentImp.show(getSupportFragmentManager(),"Display Total");
+
+                //Intent i = new Intent(Order.this, MainActivity.class);
+                //startActivity(i);
+                //finish();
             }
         });
     }
@@ -101,7 +123,7 @@ public class Order extends AppCompatActivity {
             try {
                 ContentValues cv = new ContentValues();
                 //insert anything in this code
-                cPostSQL = " '" + customerName + "' , '" + quantity + "' , '" + orderName + "' , '" + orderPrice + "' ";
+                cPostSQL = " '" + customerName + "' , '" + quantity + "' , '" + orderName + "' , '" + orderPrice + "' , '" + finalTotal + "' ";
                 cv.put("code", cPostSQL);
 
                 JSONObject json = jParser.makeHTTPRequest(urlHost, "POST", cv);

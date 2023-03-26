@@ -30,12 +30,12 @@ public class Manage extends AppCompatActivity {
     TextView textView,txtDefault_CustomerName,txtDefault_Quantity,txtDefault_OrderName,txtDefault_OrderPrice,txtDefault_ID;
     private static EditText edtitemcode;
     private static JSONParser jParser = new JSONParser();
-    private static String urlHostDelete = "http://192.168.110.91/Delicioso/Delete.php";
-    private static String urlHostCustomerName ="http://192.168.110.91/Delicioso/SelectName.php";
-    private static String urlHostQuantity = "http://192.168.110.91/Delicioso/SelectQuantity.php";
-    private static String urlHostOrderName= "http://192.168.110.91/Delicioso/SelectOrderName.php";
-    private static String urlHostOrderPrice = "http://192.168.110.91/Delicioso/SelectOrderPrice.php";
-    private static String urlHostID = "http://192.168.110.91/Delicioso/SelectID.php";
+    private static String urlHostDelete = "http://192.168.254.107/Delicioso/Delete.php";
+    private static String urlHostCustomerName ="http://192.168.254.107/Delicioso/SelectName.php";
+    private static String urlHostQuantity = "http://192.168.254.107/Delicioso/SelectQuantity.php";
+    private static String urlHostOrderName= "http://192.168.254.107/Delicioso/SelectOrderName.php";
+    private static String urlHostOrderPrice = "http://192.168.254.107/Delicioso/SelectOrderPrice.php";
+    private static String urlHostID = "http://192.168.254.107/Delicioso/SelectID.php";
     private static String TAG_MESSAGE = "message", TAG_SUCCESS = "success";
     private static String online_dataset = "";
     private static String cItemcode = "";
@@ -85,7 +85,7 @@ public class Manage extends AppCompatActivity {
 
                 cItemcode = edtitemcode.getText().toString();
                 new uploadDataToURL().execute();
-                new CustomerName().execute();
+                //new CustomerName().execute();
                 new Quantity().execute();
                 new OrderName().execute();
                 new OrderPrice().execute();
@@ -243,84 +243,6 @@ public class Manage extends AppCompatActivity {
 
                 listView.setAdapter(adapter_CustomerName);
                 textView.setText(listView.getAdapter().getCount() + " " +"record(s) fround.");
-
-
-            } else {
-                alert.setMessage("Query Interrupted... \nPlease Check Internet connection");
-                alert.setTitle("Error");
-                alert.show();
-            }
-        }
-    }
-
-    private class CustomerName extends AsyncTask<String, String, String> {
-        String cPOST = "", cPostSQL = "", cMessage = "Querying data...";
-        int nPostValueIndex;
-        ProgressDialog pDialog = new ProgressDialog(Manage.this);
-
-        public CustomerName() {
-        }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
-            pDialog.setMessage(cMessage);
-            pDialog.show();
-        }
-
-
-        @Override
-        protected String doInBackground(String... params) {
-
-            int nSuccess;
-            try {
-                ContentValues cv = new ContentValues();
-
-                cPostSQL = cItemcode;
-                cv.put("code", cPostSQL);
-
-                JSONObject json = jParser.makeHTTPRequest(urlHostQuantity, "POST", cv);
-                if (json != null) {
-                    nSuccess = json.getInt(TAG_SUCCESS);
-                    if (nSuccess == 1) {
-                        online_dataset = json.getString(TAG_MESSAGE);
-                        return online_dataset;
-                    } else {
-                        return json.getString(TAG_MESSAGE);
-                    }
-                } else {
-                    return "HTTPSERVER_ERROR";
-                }
-
-
-            } catch (JSONException e){
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String CustomerName) {
-            super.onPostExecute(CustomerName);
-            pDialog.dismiss();
-            String isEmpty = "";
-            android.app.AlertDialog.Builder alert = new AlertDialog.Builder(Manage.this);
-            if (CustomerName != null) {
-                if (isEmpty.equals("") && !CustomerName.equals("HTTPSERVER_ERROR")) { }
-
-
-                String custneym = CustomerName;
-
-                String str = custneym;
-                final String CustName[] = str.split("-");
-                list_CustomerName = new ArrayList<String>(Arrays.asList(CustName));
-                adapter_CustomerName = new ArrayAdapter<String>(Manage.this,
-                        android.R.layout.simple_list_item_1,list_CustomerName);
-
-                //listView.setAdapter(adapter_gender);
-
 
 
             } else {
