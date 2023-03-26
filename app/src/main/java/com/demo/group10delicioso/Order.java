@@ -66,36 +66,27 @@ public class Order extends AppCompatActivity {
                 i = new Intent(getApplicationContext(), MainActivity.class);
 
                 Bundle args = new Bundle();
-                int rawPrice = Integer.parseInt(orderPrice);
-                int rawQuant = Integer.parseInt(quantity);
-                int total = rawPrice * rawQuant;
+
 
                 orderName = OrderName.getText().toString();
                 orderPrice = OrderPrice.getText().toString();
                 customerName = etName.getText().toString();
                 quantity = etQuantity.getText().toString();
 
-
+                int rawPrice = Integer.parseInt(orderPrice);
+                int rawQuant = Integer.parseInt(quantity);
+                int total = rawPrice * rawQuant;
 
                 finalTotal = Integer.toString(total);
                 new uploadDataToURL().execute();
 
-
-                //DialogFragment dialogFragment=new DialogFragment();
-                //dialogFragment.show(getSupportFragmentManager(),"Total");
-
                 args.putString("finaltotal", "Your Total is: " + finalTotal);
 
                 i.putExtras(args);
-                startActivity(i);
 
                 DialogFragmentCustom dialogFragmentImp = new DialogFragmentCustom();
                 dialogFragmentImp.setArguments(args);
                 dialogFragmentImp.show(getSupportFragmentManager(),"Display Total");
-
-                //Intent i = new Intent(Order.this, MainActivity.class);
-                //startActivity(i);
-                //finish();
             }
         });
     }
