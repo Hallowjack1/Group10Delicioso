@@ -33,15 +33,16 @@ CREATE TABLE `customerorder` (
   `Quantity` int(100) NOT NULL,
   `OrderName` varchar(200) NOT NULL,
   `OrderPrice` varchar(100) NOT NULL,
-  `DateOfPurchase` date NOT NULL DEFAULT current_timestamp()
+  `DateOfPurchase` date NOT NULL DEFAULT current_timestamp(),
+  `Total` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `customerorder`
 --
 
-INSERT INTO `customerorder` (`ID`, `CustomerName`, `Quantity`, `OrderName`, `OrderPrice`, `DateOfPurchase`) VALUES
-(1, 'Matthew', 2, 'Plant Base Whopper', '60', '2023-03-21');
+INSERT INTO `customerorder` (`ID`, `CustomerName`, `Quantity`, `OrderName`, `OrderPrice`, `DateOfPurchase`, `Total`) VALUES
+(1, 'Matthew', 2, 'Plant Base Whopper', '60', '2023-03-21', '120');
 
 --
 -- Indexes for dumped tables

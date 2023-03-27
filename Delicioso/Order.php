@@ -1,6 +1,6 @@
 <?php
     require("config.php");
-    $sql = "INSERT INTO `customerorder` (`CustomerName`, `Quantity`,`OrderName`, `OrderPrice`) VALUES(".$_REQUEST["code"].")";
+    $sql = "INSERT INTO `customerorder` (`CustomerName`, `Quantity`,`OrderName`, `OrderPrice`, `Total`) VALUES(".$_REQUEST["code"].")";
 
     $select_sql = "SELECT * FROM customerorder";
     $sql = str_replace("\\", "", $sql);
